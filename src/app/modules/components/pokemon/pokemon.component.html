@@ -1,0 +1,16 @@
+<div class="container-pokemon" [ngClass]="{'selection':selection}" *ngIf="init else moreInfo" (click)="this.init=!this.init">
+    <h2>{{name|titlecase}}</h2>
+    <img class="image" [src]="src" [alt]="name">
+    <div *ngFor="let type of types" [ngStyle]="typesDynamic">
+        {{type|titlecase}}
+    </div>
+</div>
+<ng-template #moreInfo>
+    <div class="container-pokemon options" [ngClass]="{'selection':selection}">
+        <h2>{{name|titlecase}}</h2>
+        <span class="circle material-symbols-outlined" (click)="init=!init" title="Cerrar">close</span>
+        <span class="circle material-symbols-outlined" title="Más información" [routerLink]="['/details',pokemonId]">add</span>
+        <span *ngIf="!selection" class="circle material-symbols-outlined" title="Enfrentar" (click)="verifySelection()">check</span>
+        <span *ngIf="selection" class="circle material-symbols-outlined" title="Deseleccionar" (click)="verifySelection()">unpublished</span>
+    </div>
+</ng-template>

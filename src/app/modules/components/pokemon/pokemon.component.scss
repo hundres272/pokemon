@@ -1,0 +1,77 @@
+.container-pokemon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 96%;
+    height: auto;
+    padding: 2%;
+    border: 1px rgb(180, 180, 180) solid;
+    border-radius: 10px;
+    font-size: .8em;
+    // background-color: rgba(159, 172, 216, 0.267);
+    background: rgb(247,247,247);
+    background: linear-gradient(200deg, rgba(247, 247, 247, 0.509) 0%, rgba(235, 235, 235, 0.477) 46%, rgba(255, 0, 0, 0.418) 100%);
+    cursor: pointer;
+}
+
+.container-pokemon:hover {
+    background-color: rgba(159, 172, 216, 0.525);
+}
+
+h2 {
+    font-size: 100%;
+    margin-top: 10px;
+}
+
+.image {
+    width: 100%;
+}
+
+.options {
+    // background-color: rgb(150, 88, 88);
+    background: rgb(247,247,247);
+    background: linear-gradient(200deg, rgba(247,247,247,1) 0%, rgba(235,235,235,1) 46%, rgba(255,0,0,1) 100%);
+    cursor: default;
+}
+
+.options:hover {
+    background-color: rgb(150, 88, 88);
+}
+
+.circle {
+    background-color: black;
+    border-radius: 50%;
+    padding: 5%;
+    margin: 5% 0;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}
+
+.circle:first-child {
+    background-color: red;
+    color: white;
+}
+
+.circle:nth-child(2) {
+    background-color: red;
+    color: white;
+
+}
+
+.circle:last-child {
+    background-color: white;
+    color: black;
+}
+
+.selection {
+    box-shadow: 1px -2px 9px 8px rgba(245,255,76,0.84);
+    -webkit-box-shadow: 1px -2px 9px 8px rgba(245,255,76,0.84);
+    -moz-box-shadow: 1px -2px 9px 8px rgba(245,255,76,0.84);
+}
+
+// .circle>span{
+//     margin: 10px 0;
+//     border: 1px solid red;
+//     border-radius: 50%;
+// }

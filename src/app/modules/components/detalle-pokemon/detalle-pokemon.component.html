@@ -1,0 +1,20 @@
+<div class="container-details" *ngIf="pokemon">
+    <span class="return material-symbols-outlined" [routerLink]="['/home']">arrow_back</span>
+    <div class="pokemon-name">
+        <h2>{{pokemon.name|titlecase}}</h2>
+    </div>
+    <div class="container-image-details">
+        <div class="container-image">
+            <img [src]="src" [alt]="pokemon.name">
+            <p>Tipos: {{types.join(', ')}}</p>
+        </div>
+        <div class="container-stats" *ngIf="pokemon">
+            <div class="stat" *ngFor="let stat of pokemon.stats">
+                <p>Estadística base: {{stat.base_stat}}</p>
+                <p>Esfuerzo: {{stat.effort}}</p>
+                <p>Nombre: {{stat.stat.name|titlecase}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+

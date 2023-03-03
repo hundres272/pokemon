@@ -1,0 +1,29 @@
+<div class="container-rin">
+    <span class="return material-symbols-outlined" [routerLink]="['/home']">arrow_back</span>
+    <div class="name-pokemons">
+        <h2>{{pokemonList[0].name|uppercase}} vs {{pokemonList[1].name|uppercase}}</h2>
+    </div>
+    <img class="img-rin" src="/assets/images/rin.png" alt="Rin">
+    <img class="img-pokemon img-one" [ngClass]="{'opacity-max':accumulatorOne<accumulatorTwo}" [src]="urlImageOne" [alt]="pokemonList[0].name">
+    <img class="img-pokemon img-two" [ngClass]="{'opacity-max':accumulatorOne>accumulatorTwo}" [src]="urlImageTwo" [alt]="pokemonList[1].name">
+
+    <div class="text-pokemon-one">
+        <img class="ribbon" [ngClass]="{'win-one':accumulatorOne>accumulatorTwo}" src="/assets/images/liston.png" alt="Liston">
+        <div *ngFor="let item of itemsOne">
+            <span>{{item.name}}: {{item.value}}</span>
+        </div>
+        <span>Total: {{accumulatorOne > 0 ? ('+'+accumulatorOne) : accumulatorOne}}</span>
+    </div>
+    <div class="text-pokemon-one text-pokemon-two">
+        <img class="ribbon ribbon-two" [ngClass]="{'win-one':accumulatorOne<accumulatorTwo}" src="/assets/images/liston.png" alt="Liston">
+        <div *ngFor="let item of itemsTwo">
+            <span>{{item.name}}: {{item.value}}</span>
+        </div>
+        <span>Total: {{accumulatorTwo > 0 ? ('+'+accumulatorTwo) : accumulatorTwo}}</span>
+    </div>
+    <!-- <p>battle works!</p>
+    {{itemsOne|json}}<br>
+    {{itemsTwo|json}}<br>
+    {{accumulatorOne}}<br>
+    {{accumulatorTwo}} -->
+</div>

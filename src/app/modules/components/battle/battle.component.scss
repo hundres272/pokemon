@@ -1,0 +1,98 @@
+.return {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: black;
+    cursor: pointer;
+    user-select: none;
+    font-size: 2em;
+    z-index: 100;
+}
+
+.img-rin {
+    position: fixed;
+    z-index: -100;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    opacity: .6;
+}
+
+.img-pokemon {
+    filter: drop-shadow(15px 15px 20px white);
+    width: 30%;
+}
+
+.img-one {
+    -webkit-transform: rotateY(180deg);
+    position: absolute;
+    bottom: 10px;
+    left: 10%;
+}
+
+.img-two {
+    position: absolute;
+    bottom: 10px;
+    right: 10%;
+}
+
+.opacity-max {
+    opacity: .3;
+}
+
+.name-pokemons {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    font-size: 2em;
+    padding: 0;
+    top: 20px;
+    filter: drop-shadow(10px 10px 10px rgb(10 40 95));
+}
+
+.name-pokemons>h2{
+    margin: 0;
+}
+
+.text-pokemon-one {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    position: absolute;
+    border: 10px solid black;
+    padding: 20px;
+    border-radius: 20px;
+    top: 100px;
+    left: 50px;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.ribbon {
+    display: none;
+    position: absolute;
+    width: 130px;
+    // background-color: red;
+    top: -70px;
+    left: -75px;
+}
+
+.ribbon-two {
+    right: -70px;
+    left: initial;
+}
+
+.win-one {
+    display: block;
+}
+
+.text-pokemon-two {
+    right: 50px;
+    left: initial;
+}
