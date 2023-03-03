@@ -1,27 +1,23 @@
-# BatallaPokemon
+# Batalla pokemon Hugo Andrés Pantoja Benavides
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
+El proyecto ha sido generado con [Angular CLI](https://github.com/angular/angular-cli) versión 13.3.3.
 
-## Development server
+## Clonación, instalación y servidor de desarrollo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Para clonar el repositorio se ejecuta el comando
+`git clone https://github.com/hundres272/pokemon.git`
+- Una vez descargado se instalan las dependencias necesarias
+`npm install`
+- Se ejecuta el servidor de desarrollo
+`ng serve`. Para navegar a la aplicación se coloca en `http://localhost:4200/`.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Información de funcionamiento
+- Visualización
+La aplicación permite visualizar el nombre, imagen y tipo de los primeros 151 pokemon.
+- Consulta de atributos de un pokemon
+La aplicación permite consultar y mostrar información adicional de un pokemon seleccionado.
+- Selección de 2 pokemon para batalla
+La aplicaión permite seleccionar y validar la cantidad de pokemon para una batalla.
+- Batalla pokemon
+A partir de los tipos de cada uno de los pokemon seleccionados, se establecen unos valores base
+y ataques por cada tipo.
