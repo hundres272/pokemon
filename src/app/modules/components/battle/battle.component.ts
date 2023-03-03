@@ -106,88 +106,36 @@ export class BattleComponent implements OnInit {
       const noAtacaTo = damage.no_damage_to.find(itemOne => itemOne.name === itemTwoType.type.name)
       if (!noEsAtacadoFrom) {
         const findDoubleDamageFrom = damage.double_damage_from.find(itemOne => itemOne.name === itemTwoType.type.name);
-        if(findDoubleDamageFrom){
-          if(orderInit){
-            this.accumulatorOne+=(-70)
-            this.itemsOne.push(
-              {
-                name: 'double_damage_from',
-                value: '-70'
-              }
-            )
-          }else{
-            this.accumulatorTwo+=(-70)
-            this.itemsTwo.push(
-              {
-                name: 'double_damage_from',
-                value: '-70'
-              }
-            )
-          }
-        }
+        if(findDoubleDamageFrom) this.accumulator(orderInit, -70, 'double_damage_from', '-70');
         const findHalfDamageFrom = damage.half_damage_from.find(itemOne => itemOne.name === itemTwoType.type.name);
-        if(findHalfDamageFrom){
-          if(orderInit){
-            this.accumulatorOne+=(-30)
-            this.itemsOne.push(
-              {
-                name: 'half_damage_from',
-                value: '-30'
-              }
-            )
-          }else{
-            this.accumulatorTwo+=(-30)
-            this.itemsTwo.push(
-              {
-                name: 'half_damage_from',
-                value: '-30'
-              }
-            )
-          }
-        }
+        if(findHalfDamageFrom) this.accumulator(orderInit, -30, 'half_damage_from', '-30');
       }
       if(!noAtacaTo) {
         const findDoubleDamageTo = damage.double_damage_to.find(itemOne => itemOne.name === itemTwoType.type.name);
-        if(findDoubleDamageTo){
-          if(orderInit){
-            this.accumulatorOne+=70;
-            this.itemsOne.push(
-              {
-                name: 'double_damage_to',
-                value: '+70'
-              }
-            )
-          }else{
-            this.accumulatorTwo+=70;
-            this.itemsTwo.push(
-              {
-                name: 'double_damage_to',
-                value: '+70'
-              }
-            )
-          }
-        }
+        if(findDoubleDamageTo) this.accumulator(orderInit, 70, 'double_damage_to', '+70');
         const findHalfDamageTo = damage.half_damage_to.find(itemOne => itemOne.name === itemTwoType.type.name);
-        if(findHalfDamageTo){
-          if(orderInit){
-            this.accumulatorOne+=30
-            this.itemsOne.push(
-              {
-                name: 'half_damage_to',
-                value: '+30'
-              }
-            )
-          }else{
-            this.accumulatorTwo+=30
-            this.itemsTwo.push(
-              {
-                name: 'half_damage_to',
-                value: '+30'
-              }
-            )
-          }
-        }
+        if(findHalfDamageTo) this.accumulator(orderInit, 30, 'half_damage_to', '+30');
       }
     })
+  }
+
+  private accumulator(orderInit: boolean, amount: number, name: string, value: string) {
+    if(orderInit){
+      this.accumulatorOne+=amount;
+      this.itemsOne.push(
+        {
+          name: name,
+          value: value
+        }
+      )
+    }else{
+      this.accumulatorTwo+=amount;
+      this.itemsTwo.push(
+        {
+          name: name,
+          value: value
+        }
+      )
+    }
   }
 }
