@@ -12,12 +12,12 @@ El proyecto ha sido generado con [Angular CLI](https://github.com/angular/angula
 `ng serve`. Para navegar a la aplicación se coloca en `http://localhost:4200/`.
 
 ## Información de funcionamiento
-- Visualización
-La aplicación permite visualizar el nombre, imagen y tipo de los primeros 151 pokemon.
-- Consulta de atributos de un pokemon
-La aplicación permite consultar y mostrar información adicional de un pokemon seleccionado.
-- Selección de 2 pokemon para batalla
-La aplicaión permite seleccionar y validar la cantidad de pokemon para una batalla.
-- Batalla pokemon
-A partir de los tipos de cada uno de los pokemon seleccionados, se establecen unos valores base
+- Visualización:
+la aplicación permite visualizar el nombre, imagen y tipo de los primeros 151 pokemon.
+- Consulta de atributos de un pokemon:
+la aplicación permite consultar y mostrar información adicional de un pokemon seleccionado.
+- Selección de 2 pokemon para batalla:
+la aplicaión permite seleccionar y validar la cantidad de pokemon para una batalla.
+- Batalla pokemon:
+a partir de los tipos de cada uno de los pokemon seleccionados, se establecen unos valores base
 y ataques por cada tipo.
